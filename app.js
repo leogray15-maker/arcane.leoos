@@ -21,7 +21,9 @@ const rooms=[
 {id:'records',name:'THE RECORDS',wing:'network',glyph:'▥',sub:'Contracts · SOPs · Memory'},
 {id:'sanctum',name:'SANCTUM',wing:'network',glyph:'♧',sub:'Leo · Body · Sleep · Focus'}
 ];
-const agents=[['ARCANE','Commander','BRIDGE'],['MERIDIAN','Quartermaster','THE LAB'],['TALLY','Treasurer','THE VAULT'],['VECTOR','Strategist','THE WAR ROOM'],['HERALD','Signalman','BEACON'],['ORACLE','Archivist','THE LIBRARY'],['LUMEN','Track specialist','VITALS'],['ANVIL','Engineer','FORGE'],['LEDGER','Commercial analyst','THE MARKET'],['INTEL','Research analyst','INTELLIGENCE'],['WATCH','Observer','THE OBSERVATORY'],['ENVOY','Partnerships','THE DEAL ROOM'],['SCRIBE','Writer','SCRIPTORIUM'],['HOST','Community','THE LOUNGE'],['FORGE','Agent engineer','THE AGENT GARAGE'],['GUARD','Governance','THE CONTROL ROOM'],['VENTURE','Innovation','THE INVENTOR’S ROOM'],['STEWARD','Records','THE RECORDS'],['KEEPER','Operator support','SANCTUM']];
+const agents=[
+['ARCANE','Commander','BRIDGE'],['MERIDIAN','Quartermaster','THE LAB'],['TALLY','Treasurer','THE VAULT'],['VECTOR','Strategist','THE WAR ROOM'],['HERALD','Signalman','BEACON'],['ORACLE','Archivist','THE LIBRARY'],['LUMEN','Physician','VITALS'],['ANVIL','Engineer','FORGE'],['SCRIBE','Scrivener','SCRIPTORIUM'],['KEEPER','Steward','SANCTUM'],['CIPHER','Intelligence','INTELLIGENCE'],['ABACUS','Commerce','THE MARKET'],['ENVOY','Deals','THE DEAL ROOM'],['VIGIL','Observer','THE OBSERVATORY'],['WARDEN','Risk & Control','THE CONTROL ROOM'],['SPARK','Inventor','THE INVENTOR’S ROOM'],['FOUNDRY','Agent-wright','THE AGENT GARAGE'],['RELIC','Records','THE RECORDS'],['EMBER','Steward of the Lounge','THE LOUNGE']
+];
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const state={view:'floor',room:null,tasks:JSON.parse(localStorage.getItem('arcane-v4-tasks')||'[]'),objective:localStorage.getItem('arcane-v4-objective')||''};
 function save(){localStorage.setItem('arcane-v4-tasks',JSON.stringify(state.tasks))}
