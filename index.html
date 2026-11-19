@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08090d"><meta name="description" content="ARCANEAIOS — LEOOS V4 operating environment">
+<title>ARCANEAIOS — LEOOS V4</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar" id="sidebar">
+ <div class="brand"><div class="brand-mark">A<span>·</span></div><div><div class="brand-name">ARCANE</div><div class="brand-sub">LEOOS <b>V4</b></div></div><button class="icon-btn sidebar-close" id="closeNav" aria-label="Close navigation">×</button></div>
+ <button class="workspace-switch"><span class="workspace-dot"></span><span><b>Command workspace</b><small>Private environment</small></span><span class="chevron">⌄</span></button>
+ <div class="nav-label">WORKSPACE</div>
+ <nav id="mainNav">
+  <button class="nav-item active" data-view="floor"><span class="nav-icon">⌂</span><span>The Floor</span><kbd>G F</kbd></button>
+  <button class="nav-item" data-view="warroom"><span class="nav-icon">◈</span><span>War Room</span></button>
+  <button class="nav-item" data-view="agents"><span class="nav-icon">◎</span><span>Agent Operations</span><span class="nav-count">19</span></button>
+  <button class="nav-item" data-view="intelligence"><span class="nav-icon">✳</span><span>Intelligence Exchange</span></button>
+  <button class="nav-item" data-view="graph"><span class="nav-icon">⌘</span><span>Knowledge Graph</span></button>
+ </nav>
+ <div class="wing-heading"><span class="nav-label">FACILITY</span><button id="collapseWings" class="tiny-btn">−</button></div>
+ <div id="wingNav" class="wing-nav">
+  <section class="wing"><div class="wing-title"><span class="wing-code">C1</span><span>PRODUCTION</span></div><div class="room-list" data-wing="production"></div></section>
+  <section class="wing"><div class="wing-title"><span class="wing-code">C2</span><span>COMMAND</span></div><div class="room-list" data-wing="command"></div></section>
+  <section class="wing"><div class="wing-title"><span class="wing-code">C3</span><span>KNOWLEDGE</span></div><div class="room-list" data-wing="knowledge"></div></section>
+  <section class="wing"><div class="wing-title"><span class="wing-code">C4</span><span>NETWORK & LIFE</span></div><div class="room-list" data-wing="network"></div></section>
+ </div>
+ <div class="sidebar-bottom"><div class="operator"><div class="avatar">LG</div><div><b>Leo Gray</b><small>COMMANDER · OWNER</small></div><button class="more-btn">···</button></div></div>
+</aside>
+<div class="scrim" id="scrim"></div>
+<main class="main">
+ <header class="topbar"><div class="top-left"><button class="icon-btn mobile-menu" id="openNav">☰</button><div class="crumb"><span>ARCANE</span><i>/</i><b id="crumbCurrent">THE FLOOR</b></div></div><div class="top-actions"><button class="search-trigger" id="searchOpen"><span>⌕</span> Search anything... <kbd>⌘ K</kbd></button><button class="icon-btn" id="notifications" aria-label="Notifications">♧<i class="notification-dot"></i></button><div class="top-divider"></div><div class="system-pill"><span class="pulse"></span> V4 WORKSPACE</div></div></header>
+ <div class="page" id="page">
+  <section class="page-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> THURSDAY, 19 NOVEMBER 2026 <span class="eyebrow-muted">/ PRIVATE OPERATING ENVIRONMENT</span></div><h1>Good evening, Leo<span class="purple">.</span></h1><p class="subtitle">Your operation, in one place. Decide what matters. Move it forward.</p></div><div class="heading-actions"><button class="btn btn-quiet" id="openPalette">⌘ &nbsp; Command</button><button class="btn btn-primary" id="addTask">＋ New task</button></div></section>
+  <section class="readiness-strip">
+   <div class="readiness-main"><div class="readiness-icon">◉</div><div><b>Workspace is standing by</b><small>V4 interface active · live services await configuration</small></div></div>
+   <div class="readiness-items"><span><i class="status amber"></i> Database <b>Not connected</b></span><span><i class="status amber"></i> AI providers <b>Not configured</b></span><span><i class="status green"></i> Local workspace <b>Ready</b></span></div>
+   <button class="text-link" data-view="intelligence">Configure <span>↗</span></button>
+  </section>
+  <section class="metric-grid">
+   <article class="metric-card"><div class="metric-top"><span>ACTIVE VENTURES</span><span class="metric-symbol">◫</span></div><div class="metric-value">04</div><div class="metric-foot">Four operating ventures <span class="metric-note">Venture registry</span></div></article>
+   <article class="metric-card"><div class="metric-top"><span>AGENT ROSTER</span><span class="metric-symbol">◎</span></div><div class="metric-value">19</div><div class="metric-foot">Configured specialists <span class="metric-note">No autonomous execution</span></div></article>
+   <article class="metric-card"><div class="metric-top"><span>FACILITY ROOMS</span><span class="metric-symbol">▦</span></div><div class="metric-value">20<span class="metric-unit"> + 1 annex</span></div><div class="metric-foot">Across four wings <span class="metric-note">Full navigation below</span></div></article>
+   <article class="metric-card"><div class="metric-top"><span>CONNECTED PROVIDERS</span><span class="metric-symbol">✳</span></div><div class="metric-value">00<span class="metric-unit"> / 07</span></div><div class="metric-foot">No API keys configured <span class="metric-note">Connect in Exchange</span></div></article>
+  </section>
+  <section class="content-grid">
+   <div class="main-column">
+    <div class="section-head"><div><div class="section-kicker">COMMAND CENTRE</div><h2>Today's operating picture</h2></div><span class="live-label"><i class="status amber"></i> Awaiting data sync</span></div>
+    <div class="objective-panel"><div class="objective-tag">PRIMARY OBJECTIVE <span>01 / 01</span></div><h3>Choose the move that compounds.</h3><p>Set today's objective, then break it into clear actions. Your priorities stay here until the live operating data is connected.</p><div class="objective-bottom"><button class="btn btn-primary btn-small" id="setObjective">Set today's objective <span>→</span></button><span class="mono muted">OPERATOR CONTROL REQUIRED</span></div></div>
+    <div class="section-head ventures-head"><div><div class="section-kicker">PORTFOLIO</div><h2>Venture overview</h2></div><button class="text-link" data-view="warroom">Open War Room ↗</button></div>
+    <div class="venture-grid">
+     <button class="venture-card" data-room="archives"><div class="venture-top"><span class="venture-mark violet">A</span><span class="venture-state"><i class="status amber"></i> Awaiting sync</span></div><h3>The Arcane Archives</h3><p>Education · Membership · Community</p><div class="venture-bottom"><span>OPEN VENTURE</span><b>↗</b></div></button>
+     <button class="venture-card" data-room="apothecary"><div class="venture-top"><span class="venture-mark cyan">P</span><span class="venture-state"><i class="status amber"></i> Awaiting sync</span></div><h3>Arcane Peptides</h3><p>Commerce · Stock · Operations</p><div class="venture-bottom"><span>OPEN VENTURE</span><b>↗</b></div></button>
+     <button class="venture-card" data-room="vitals"><div class="venture-top"><span class="venture-mark green">T</span><span class="venture-state"><i class="status amber"></i> Awaiting sync</span></div><h3>Arcane Track</h3><p>Product · Members · Retention</p><div class="venture-bottom"><span>OPEN VENTURE</span><b>↗</b></div></button>
+     <button class="venture-card" data-room="trading"><div class="venture-top"><span class="venture-mark gold">↗</span><span class="venture-state"><i class="status amber"></i> Awaiting sync</span></div><h3>Trading</h3><p>XAUUSD · ICT · Journal</p><div class="venture-bottom"><span>OPEN TRADING FLOOR</span><b>↗</b></div></button>
+    </div>
+    <div class="section-head task-head"><div><div class="section-kicker">EXECUTION</div><h2>Today's moves</h2></div><button class="text-link" id="taskAddInline">＋ Add a move</button></div>
+    <div class="task-panel"><div class="task-tabs"><span>MY PRIORITIES</span><span class="task-count" id="taskCount">0 OPEN</span></div><div id="taskList" class="task-list"><div class="empty-state"><div class="empty-icon">⌁</div><b>No priorities recorded</b><span>Add your first move to start the day.</span></div></div></div>
+   </div>
+   <aside class="right-column">
+    <div class="side-panel"><div class="panel-heading"><div><div class="section-kicker">SYSTEM ACTIVITY</div><h3>Recent events</h3></div><span class="panel-menu">···</span></div><div class="activity-empty"><div class="activity-line"></div><div class="activity-icon">◌</div><b>No live events yet</b><p>Events will appear here when the V3 data layer is connected.</p></div></div>
+    <div class="side-panel quick-panel"><div class="panel-heading"><div><div class="section-kicker">SHORTCUTS</div><h3>Quick access</h3></div></div><button class="quick-link" data-view="agents"><span class="quick-icon purple-bg">◎</span><span><b>Agent operations</b><small>Roster, roles & execution history</small></span><span>↗</span></button><button class="quick-link" data-view="intelligence"><span class="quick-icon cyan-bg">✳</span><span><b>Intelligence Exchange</b><small>Providers, models & routing</small></span><span>↗</span></button><button class="quick-link" data-view="graph"><span class="quick-icon gold-bg">⌘</span><span><b>Knowledge graph</b><small>Explore connected knowledge</small></span><span>↗</span></button><button class="quick-link" data-view="control"><span class="quick-icon rose-bg">◈</span><span><b>Control room</b><small>Permissions & system health</small></span><span>↗</span></button></div>
+    <div class="guardrail-card"><div class="guardrail-icon">⬡</div><div><b>Standing doctrine</b><p>Agents draft and recommend. You approve. No autonomous spending or unattended publishing.</p><span>GUARDRAILS ACTIVE IN V3 CONFIG</span></div></div>
+   </aside>
+  </section>
+  <footer class="page-footer"><span>ARCANEAIOS <b>LEOOS V4</b> · PRIVATE SYSTEM</span><span>ONE FACILITY. ONE BRAIN. MULTIPLE INTELLIGENCES.</span></footer>
+ </div>
+ <div class="bottom-bar"><div><i class="status green"></i> <span>Interface</span> <b>Online</b></div><div><i class="status amber"></i> <span>Database</span> <b>Unconfigured</b></div><div><i class="status amber"></i> <span>AI gateway</span> <b>Unconfigured</b></div><div class="bottom-right">LOCAL WORKSPACE <span>·</span> V4.0.0</div></div>
+</main>
+</div>
+<div class="modal-backdrop" id="modalBackdrop"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-head"><div><div class="section-kicker" id="modalKicker">OPERATOR INPUT</div><h2 id="modalTitle">New task</h2></div><button class="icon-btn" id="modalClose">×</button></div><form id="taskForm"><label for="taskText">What needs to move forward?</label><input id="taskText" maxlength="140" placeholder="Describe the next action..." required><div class="form-row"><div><label for="taskPriority">Priority</label><select id="taskPriority"><option value="high">High</option><option value="normal" selected>Normal</option><option value="low">Low</option></select></div><div><label for="taskRoom">Room</label><select id="taskRoom"><option value="">Unassigned</option></select></div></div><div class="modal-actions"><button type="button" class="btn btn-quiet" id="modalCancel">Cancel</button><button class="btn btn-primary" type="submit">Save task</button></div></form></section></div>
+<div class="search-backdrop" id="searchBackdrop"><section class="search-modal"><div class="search-input-wrap"><span>⌕</span><input id="globalSearch" placeholder="Search rooms, agents, commands..." autocomplete="off"><kbd>ESC</kbd></div><div class="search-results" id="searchResults"><div class="search-hint">NAVIGATE THE FACILITY <span>↑ ↓ TO MOVE · ENTER TO OPEN</span></div></div></section></div>
+<div class="toast" id="toast"></div>
+<script type="module" src="/app.js"></script>
+</body></html>
